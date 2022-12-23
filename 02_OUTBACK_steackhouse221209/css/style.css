@@ -1,0 +1,155 @@
+@charset "utf-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Fuzzy+Bubbles:wght@700&family=Nanum+Brush+Script&family=Nanum+Gothic&family=Noto+Sans+KR&family=Open+Sans&display=swap');
+
+*{box-sizing: border-box;}
+body{font-family: 'Noto Sans KR', sans-serif;}
+
+
+/* 공통속성 */
+.container{width: 1180px;height: inherit;margin: 0 auto;background: rgba(0, 0, 0, 0.5);}
+/* 스와이퍼 공통속성 1900px로 만듬 */
+.swiper_wrap{width: 1900px;height: 1000px;margin: 0 auto;background: rgba(0, 0, 0, 0.5);}
+/* video 공통속성 1900px로 만듬 */
+.video{width: 1900px;height: 860px;margin: 0 auto;background: rgb(255, 255, 255);text-align: center;}
+/* 레이아웃 */
+#header{width: 100%;height: 100px;background: #343436;position: fixed;left: 0;top: 0;z-index: 999;}
+
+
+
+/* header */
+.header_inner{position: relative;}
+.header_inner .header_inner_flex{display: flex;height: 100px;align-items: center;}
+.header_inner h1{margin-right:7%;}
+
+.header_inner #nav{position: relative;z-index: 2;}
+.header_inner #nav ul{display: flex;}
+.header_inner #nav ul>.first_li{padding: 15px 15px;position: relative;top: 0;left: 0;}
+.header_inner #nav > ul > li > a{position: relative; padding: 30px 0 37px 0; font-size: 19px;color: #fff;display: block;}
+.header_inner #nav > ul > li > a:after{position: absolute; width: 0; height:2px; content: ""; background: red; left: -100%; bottom: 30px; transition: .3s; }
+.header_inner #nav > ul > li:hover > a:after{ width: 100%;left: 0;}
+.header_inner #nav ul .first_li{padding-bottom: 10px;}
+.header_inner #nav  ul  .first_li ul li a .ico-best{padding-left: 10px;position: absolute;right: 40px;top: 12px;}
+.header_inner #nav  ul  .first_li ul li a .ico-new{padding-left: 10px;position: absolute;right: 70px;top: 12px;}
+.header_inner #nav ul li ul{position: absolute;left: -10px;flex-direction: column;background: rgba(0, 0, 0, 1);width: 200px;padding-left: 20px;display: none;}
+.header_inner #nav ul li:nth-child(2) ul{width: 300px;}
+.header_inner #nav ul li:nth-child(3) ul{width: 220px;}
+.header_inner #nav ul li ul li{text-align: left;padding: 20px 15px;position: relative;top: 0;left: 0;}
+.header_inner #nav ul> li> ul> li> a{display: block;font-size: 14px;color: #fff;}
+.header_inner #gnb{display: flex;position: absolute;right: 0;top: 40px;}
+.header_inner #gnb>.gnbchild{position: relative;display: flex;}
+.header_inner #gnb ul li{margin-right:26.3px;}
+.header_inner #gnb ul li:last-child{margin-right:0px;}
+.header_inner #gnb ul li a{color: #999999;font-size: 14px;}
+.header_inner #gnb ul .join{background: #555555;padding: 5px 20px;}
+.mobile_header{display: none;}
+
+/* swiper 옵션변경 */
+
+/* 
+div>.swiper-button-prev::after{background: url(../outbackimage/btn_main_visual_prev_on.png) no-repeat ;}
+
+div>.swiper-button-next:after{background: url(../outbackimage/btn_main_visual_next_on.png) no-repeat ;} */
+
+
+/* media screen 스크롤 안생기게 하는 역할을 한다. 없으면 스크롤 생긴다. 좌우로 줄일시에 */
+/* container만큼 크기를 맞춰줘야 좌우로 줄였을 시에 container크기만큼 줄어도 스크롤이 생기지 않고 줄어든다. */
+@media screen and (max-width: 1900px) {
+    .swiper_wrap{width: 100%;}
+    .video{width: 100%;}
+    #mainVideo{width: 100%;}
+}
+
+@media screen and (max-width: 1180px) {
+    .container{width: 100%;}
+    .swiper_wrap{width: 100%;}
+    .header_inner #gnb ul{top: -25px;}
+    .header_inner #nav .navchild li:last-child{margin-right:0;}
+    .header_inner .header_inner_flex{justify-content: space-between;}
+}
+
+@media screen and (max-width: 1120px) {
+    
+}
+
+@media screen and (max-width: 850px) {
+    #header{width: 100%;height: 100px;background: #555555;}
+    .header_inner {display: none;}
+    .mobile_header{display: block;height: 100px;width: 100%;}
+    .mobile_header ul{display: flex; height: 100px;align-items: center;justify-content: space-between;}
+    .mobile_header>ul>li:first-child{width: 26px;height: 16px;}
+    .mobile_header>ul>li:first-child .app-btn{width: 26px;height: 16px;display: block;position: relative;}
+    .mobile_header ul li .app-btn .bar{width: 100%;height: 2px;background: #555;display: block;position: absolute;top: 0;left: 0;}
+    .mobile_header ul li .app-btn .bar1{top: 0;}
+    .mobile_header ul li .app-btn .bar1.add{top: 50%;transform: rotate(45deg);margin-top: -1px;}
+    .mobile_header ul li .app-btn .bar2{top: 50%;}
+    .mobile_header ul li .app-btn .bar2.add{opacity: 0;}
+    .mobile_header ul li .app-btn .bar3{top: 100%;}
+    .mobile_header ul li .app-btn .bar3.add{top: 50%;transform: rotate(-45deg);margin-top: -1px;}
+    .mobile_header ul li .mobile-nav{position: absolute;top: 100px;width: 100%;left: 0;display: none;height: 300px;}
+    .mobile_header ul li .mobile-nav li{height: 50px;border-bottom: 1px solid #ddd;background: rgba(0, 0, 0, 0.8);line-height: 50px;text-align: center;}
+    .mobile_header ul li .mobile-nav li a{color: #ebebeb;}
+    .mobile_header ul li .mobile-find-btn{font-size: 24px;color: #555;}
+}
+
+@media screen and (max-width: 730px) {
+    .header_inner #gnb ul{}
+    .header_inner #nav ul{}
+}
+
+/* <!-- swiperslider Demo styles --> */
+
+html,
+body {
+  position: relative;
+  height: 100%;
+}
+
+body {
+  background: #eee;
+  font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  color: #000;
+  margin: 0;
+  padding: 0;
+}
+
+.swiper {
+  width: 100%;
+  height: 100%;
+}
+
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+
+  /* Center slide text vertically */
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  margin-top: 200px;
+}
+
+.swiper {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
