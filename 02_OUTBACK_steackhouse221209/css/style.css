@@ -17,7 +17,7 @@ body{font-family: 'Noto Sans KR', sans-serif;}
 #mainVideo{vertical-align: bottom;}
 
 /* main 공통속성 1900px로 만듬 */
-.main_banner{width: 100%;height: 520px;margin: 0 auto;background: rgb(255, 255, 255);}
+.main_banner{width: 100%;height: inherit;margin: 0 auto;background: rgb(255, 255, 255);}
 
 /* 레이아웃 */
 #header{width: 100%;height: 100px;background: #343436;position: fixed;left: 0;top: 0;z-index: 999;}
@@ -84,13 +84,30 @@ div>.swiper-button-next:after{background: url(../outbackimage/btn_main_visual_ne
 .section4 .main_banner .reward-title .line span:nth-child(3){right: 0;bottom: 0;width: 100%;height:5px;}
 .section4 .main_banner .reward-title .line span:nth-child(4){left: 0;bottom: 0;width: 5px;height: 10%;}
 .section4 .main_banner .container ol{display: flex; flex-wrap: wrap;align-items: center;}
-.section4 .main_banner .container ol li{width: 25.333%;margin-top: 2px;position: relative;top: 0;left: 350px;}
+.section4 .main_banner .container ol li{width: 25.333%;margin-top: 2px;position: relative;top: 81px;left: 350px;}
 .section4 .main_banner .container ol li:nth-child(4){margin-top: -210px;}
 .section4 .main_banner .container ol li:nth-child(5){margin-top: -210px;}
 .section4 .main_banner .container ol li:nth-child(6){margin-top: -210px;}
 .section4 .main_banner .container ol li em{font-size: 16px;color: #96603d;opacity: 0.4;}
 .section4 .main_banner .container ol li p.reward-name{margin-top: 10px;color: #222;font-size: 18px;font-weight: 500;}
-.section4 .main_banner .container ol li p.reward-info{height: 63px;margin-top: 10px;color: #666;font-size: 14px;line-height: 21px;overflow: hidden;}
+.section4 .main_banner .container ol li p.reward-info{height: 300px;margin-top: 10px;color: #666;font-size: 14px;line-height: 21px;overflow: hidden;}
+
+/* main banner section5 */
+.section5 .main_banner .container{position: relative;}
+.speed-big-menu > li > a > span{display: block;}
+.speed-big-menu > li > a {position: relative;}
+.speed-big-menu > li > a > span> img{max-width: 100%;transition: .3s;}
+.speed-big-menu > li:hover > a > span> img.icon{margin-top: -20px;}
+.speed-big-menu > li:hover > a > span.arrow{scale: 1.2;transform-origin: 0 100%;}
+.speed-big-menu > li > a > span> .icon{position: absolute;top: 44px;right: 70px;}
+.section5 .main_banner .container .speed-big-menu{display: flex;width: 100%;height: 160px;}
+.section5 .main_banner .container .speed-big-menu li{width: 33.3333%;}
+.section5 .main_banner .container .speed-big-menu li.menu02{background: #907354;}
+.section5 .main_banner .container .speed-big-menu li.menu03{background: #434343;}
+.section5 .main_banner .container .speed-big-menu li.menu04{background: #c30606;}
+.section5 .main_banner .container .speed-big-menu li a{position: relative;display: block;height: 160px;padding: 30px;margin-left: 1px;background-repeat: no-repeat;background-position: center center;background-size: cover;box-sizing: border-box;}
+.section5 .main_banner .container .speed-big-menu li a .txt{color: #fff;font-size: 14px;line-height: 20px;}
+.section5 .main_banner .container .speed-big-menu li a .arrow{position: absolute;bottom: 37px;left: 30px;width: 40px;height: 4px;background: url(../outbackimage/speed_menu_arrow.png) right bottom -1px no-repeat;border-bottom: 1px solid #fff;transform: scale(1);transition: .3s;}
 
 
 /* media screen 스크롤 안생기게 하는 역할을 한다. 없으면 스크롤 생긴다. 좌우로 줄일시에 */
@@ -102,13 +119,15 @@ div>.swiper-button-next:after{background: url(../outbackimage/btn_main_visual_ne
 }
 
 @media screen and (max-width: 1195px) {
+#header{padding: 0 20px;box-sizing: border-box;}
 .container{width: 100%;}
 .section4 .main_banner .reward-title{scale: 0.8;}
 .section4 .main_banner .container ol{display: flex; flex-wrap: wrap;}
-.section4 .main_banner .container ol li{width: 25.333%;margin-top: 2px;position: relative;top: 0;left: 300px;}
+.section4 .main_banner .container ol li{width: 25.333%;margin-top: 2px;position: relative;top: 81px;left: 300px;}
 }
 
 @media screen and (max-width: 1180px) {
+    #header{padding: 0 20px;box-sizing: border-box;}
     .container{width: 100%;}
     .swiper_wrap{width: 100%;}
     .header_inner #gnb ul{top: -32px;}
@@ -117,21 +136,40 @@ div>.swiper-button-next:after{background: url(../outbackimage/btn_main_visual_ne
 }
 
 @media screen and (max-width: 1140px) {
+  #header{padding: 0 20px;box-sizing: border-box;}
   .container{width: 100%;}
   .section4 .main_banner .reward-title{scale: 0.7;}
   .section4 .main_banner .container ol{display: flex; flex-wrap: wrap;}
-  .section4 .main_banner .container ol li{width: 25.333%;margin-top: 2px;position: relative;top: 0;left: 280px;}
+  .section4 .main_banner .container ol li{width: 25.333%;margin-top: 2px;position: relative;top: 81px;left: 280px;}
 }
 
 @media screen and (max-width: 1120px) {
+  #header{padding: 0 20px;box-sizing: border-box;}
   .container{width: 100%;}
   .section4 .main_banner .reward-title{display: none;}
-  .section4 .main_banner .container ol li{width: 25.333%;margin-top: 2px;position: relative;top: 0;left: 180px;}
+  .section4 .main_banner .container ol li{width: 25.333%;margin-top: 2px;position: relative;top: 81px;left: 120px;padding: 0 50px; box-sizing: border-box;}
+}
+
+@media screen and (max-width: 1060px) {
+  #header{padding: 0 20px;box-sizing: border-box;}
+  .container{width: 100%;}
+  .section4 .main_banner .reward-title{display: none;}
+  .section4 .main_banner .container ol li p.reward-info{height: 139px;}
+  .section4 .main_banner .container ol li{width: 50%;margin-top: 45px;position: relative;top: 0px;left: 0px;padding: 0 176px; box-sizing: border-box;}
+  .section4 .main_banner .container ol li:nth-child(4){margin-top: 0px;}
+  .section4 .main_banner .container ol li:nth-child(5){margin-top: 0px;}
+  .section4 .main_banner .container ol li:nth-child(6){margin-top: 0px;}
+}
+
+@media screen and (max-width: 1000px) {
+  .section5 .main_banner .container .speed-big-menu{display: flex;flex-wrap: wrap;}
+  .section5 .main_banner .container .speed-big-menu li{width: 50%;}
+  .section5 .main_banner .container .speed-big-menu li.menu03{display: none;}
 }
 
 @media screen and (max-width: 850px) {
-    #header{width: 100%;height: 100px;background: #555555;}
-    #header .container{background: rgba(0, 0, 0, 0.5);}
+    #header{width: 100%;height: 100px;background: #343436;padding: 0 20px;box-sizing: border-box;}
+    #header .container{background: #343436;}
     .header_inner {display: none;}
     .mobile_header{display: block;height: 100px;width: 100%;}
     .mobile_header ul{display: flex; height: 100px;align-items: center;justify-content: space-between;}
@@ -150,18 +188,22 @@ div>.swiper-button-next:after{background: url(../outbackimage/btn_main_visual_ne
     .mobile_header ul li .mobile-find-btn{font-size: 24px;color: #555;}
     .container{width: 100%;}
 
-    .section4 .main_banner .container ol li{width: 50%;margin-top: 2px;position: relative;top: 0;left: 0px; padding: 0 100px; box-sizing: border-box;}
+    .section4 .main_banner .container ol li{width: 50%;margin-top: 2px;position: relative;top: 40px;left: 0px; padding: 0 100px; box-sizing: border-box;}
     .section4 .main_banner .container ol li:nth-child(4){margin-top: 0px;}
     .section4 .main_banner .container ol li:nth-child(5){margin-top: 0px;}
     .section4 .main_banner .container ol li:nth-child(6){margin-top: 0px;}
+
+    .section5 .main_banner .container .speed-big-menu{display: flex;flex-wrap: wrap;}
+    .section5 .main_banner .container .speed-big-menu li{width: 100%;}
+    .section5 .main_banner .container .speed-big-menu li.menu03{display: block;}
 }
 
 @media screen and (max-width: 600px) {
-.section4 .main_banner .container ol{padding: 0 50px;box-sizing: border-box;}
+.section4 .main_banner .container ol{position: relative;top: -5px;left: 0px;padding: 0 100px;box-sizing: border-box;}
 .section4 .main_banner .container ol li{width: 100%;}
 .section4 .main_banner .container ol li em{font-size: 12px;color: #96603d;opacity: 0.4;}
 .section4 .main_banner .container ol li p.reward-name{margin-top: 0px;color: #222;font-size: 12px;font-weight: normal;}
-.section4 .main_banner .container ol li p.reward-info{height: 20px;margin-top: 10px;color: #666;font-size: 14px;line-height: 21px;overflow: hidden;}
+.section4 .main_banner .container ol li p.reward-info{height: 159px;margin-top: 10px;color: #666;font-size: 14px;line-height: 21px;overflow: hidden;}
 }
 
 /* <!-- swiperslider Demo styles --> */

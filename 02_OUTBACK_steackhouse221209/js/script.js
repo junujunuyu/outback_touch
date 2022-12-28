@@ -42,6 +42,15 @@ var swiper = new Swiper(".mySwiper", {
   }
 });
 
+/* cursor_point_change 마우스모양 */
+$('body').css({cursor:'url(./outbackimage/meat1.png),auto'})
+$('a').css({cursor:'url(./outbackimage/meat2.png),auto'})
+$('a').css({cursor:'url(./outbackimage/meat2.png),auto'})
+$('.swiper-button-next').css({cursor:'url(./outbackimage/meat2.png),auto'})
+$('.swiper-button-prev').css({cursor:'url(./outbackimage/meat2.png),auto'})
+$('.swiper-pagination-bullet').css({cursor:'url(./outbackimage/meat2.png),auto'})
+
+
 
 
 
