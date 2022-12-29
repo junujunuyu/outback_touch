@@ -50,6 +50,24 @@ $('.swiper-button-next').css({cursor:'url(./outbackimage/meat2.png),auto'})
 $('.swiper-button-prev').css({cursor:'url(./outbackimage/meat2.png),auto'})
 $('.swiper-pagination-bullet').css({cursor:'url(./outbackimage/meat2.png),auto'})
 
+/* topbutton */
+$(document).ready(function(){
+  // When the user scrolls down 20px from the top of the document, show the button
+  $(window).scroll(function(){
+    if ($(this).scrollTop() > 20) {
+      $('#topBtn').fadeIn();
+    } else {
+      $('#topBtn').fadeOut();
+    }
+  });
+
+  // When the button is clicked, scroll to the top of the document
+  $('#topBtn').click(function(){
+    $('html, body').animate({scrollTop: 0}, 'slow');
+    return false;
+  });
+});
+
 
 
 

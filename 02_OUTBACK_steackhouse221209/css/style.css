@@ -16,9 +16,12 @@ body{font-family: 'Noto Sans KR', sans-serif;}
 #video{width: 100%;height: 100%;margin: 0 auto;background: rgb(255, 255, 255);}
 #mainVideo{vertical-align: bottom;}
 
-/* main 공통속성 1900px로 만듬 */
+/* banner 공통속성 1900px로 만듬 */
 .main_banner{width: 100%;height: inherit;margin: 0 auto;background: rgb(255, 255, 255);}
 
+/* footer 공통속성 1900px로 만듬 */
+.main_footer{width: 100%;height: inherit;margin: 0 auto;background: rgb(255, 255, 255);}
+.footer_wrap{width: 1600px;height: inherit;}
 /* 레이아웃 */
 #header{width: 100%;height: 100px;background: #343436;position: fixed;left: 0;top: 0;z-index: 999;}
 
@@ -110,15 +113,47 @@ div>.swiper-button-next:after{background: url(../outbackimage/btn_main_visual_ne
 .section5 .main_banner .container .speed-big-menu li a .arrow{position: absolute;bottom: 37px;left: 30px;width: 40px;height: 4px;background: url(../outbackimage/speed_menu_arrow.png) right bottom -1px no-repeat;border-bottom: 1px solid #fff;transform: scale(1);transition: .3s;}
 
 
+/* main footer footer1 */
+.footer1 .main_footer{border-top: 1px #e5e5e5 solid;}
+.footer1 .main_footer .container{position: relative;}
+.footer1 .main_footer .container .bottom-brand-list{width: 100%;padding: 30px 0 50px;background:#fff;}
+.footer1 .main_footer .container .bottom-brand-list ul{width: 100%;margin: 0 auto;font-size: 0;display: flex;justify-content: space-between;}
+.footer1 .main_footer .container .bottom-brand-list ul li{position: relative; text-align: center; width: 16.6666%}
+.footer1 .main_footer .container .bottom-brand-list ul li::after{content: "";display: block;position: absolute; width: 1px;height: 20px;top: 50%;transform: translateY(-50%);background: #e4e4e4;}
+.footer1 .main_footer .container .bottom-brand-list ul li:first-child:after{content: "";display: none;position: absolute; width: 1px;height: 20px;top: 50%;transform: translateY(-50%);background: #e4e4e4;}
+.footer1 .main_footer .container .bottom-brand-list ul li a img{max-width: 100%;}
+
+/* main topbutton footer2 */
+.footer2 .footer_wrap{position: relative;}
+
+#topBtn {
+  display: none; /* Hide the button by default */
+  position: absolute; /* Fixed position at the bottom of the page */
+  bottom: 0px;/* Place the button 20px from the bottom */
+  right: 0px; /* Place the button 30px from the right */
+  z-index: 99; /* Make sure the button is on top of other elements */
+  border: none; /* Remove borders */
+  outline: none; /* Remove outline */
+  background-color: #000000; /* Set a background color */
+  color: white; /* Text color */
+  cursor: pointer; /* Add a mouse pointer on hover *//* Add some padding */
+}
+
 /* media screen 스크롤 안생기게 하는 역할을 한다. 없으면 스크롤 생긴다. 좌우로 줄일시에 */
 /* container만큼 크기를 맞춰줘야 좌우로 줄였을 시에 container크기만큼 줄어도 스크롤이 생기지 않고 줄어든다. */
 @media screen and (max-width: 1900px) {
     .swiper_wrap{width: 100%;}
     .video{width: 100%;}
     #mainVideo{width: 100%;}
+    
+}
+@media screen and (max-width: 1600px) {
+  .footer_wrap{width: 100%;}
 }
 
-@media screen and (max-width: 1195px) {
+
+
+@media screen and (max-width: 1198px) {
 #header{padding: 0 20px;box-sizing: border-box;}
 .container{width: 100%;}
 .section4 .main_banner .reward-title{scale: 0.8;}
@@ -155,7 +190,7 @@ div>.swiper-button-next:after{background: url(../outbackimage/btn_main_visual_ne
   .container{width: 100%;}
   .section4 .main_banner .reward-title{display: none;}
   .section4 .main_banner .container ol li p.reward-info{height: 139px;}
-  .section4 .main_banner .container ol li{width: 50%;margin-top: 45px;position: relative;top: 0px;left: 0px;padding: 0 176px; box-sizing: border-box;}
+  .section4 .main_banner .container ol li{width: 50%;margin-top: 45px;position: relative;top: 0px;left: 0px;padding: 0 22px; box-sizing: border-box;text-align: center;}
   .section4 .main_banner .container ol li:nth-child(4){margin-top: 0px;}
   .section4 .main_banner .container ol li:nth-child(5){margin-top: 0px;}
   .section4 .main_banner .container ol li:nth-child(6){margin-top: 0px;}
@@ -165,6 +200,17 @@ div>.swiper-button-next:after{background: url(../outbackimage/btn_main_visual_ne
   .section5 .main_banner .container .speed-big-menu{display: flex;flex-wrap: wrap;}
   .section5 .main_banner .container .speed-big-menu li{width: 50%;}
   .section5 .main_banner .container .speed-big-menu li.menu03{display: none;}
+
+  .footer1 .main_footer .container .bottom-brand-list ul{display: flex; flex-wrap: wrap;}
+  .footer1 .main_footer .container .bottom-brand-list ul li{position: relative; text-align: center; width: 16.6666%;scale: 0.95;}
+}
+
+@media screen and (max-width: 950px) {
+  .footer1 .main_footer .container .bottom-brand-list ul{display: flex; flex-wrap: wrap;}
+  .footer1 .main_footer .container .bottom-brand-list ul li{position: relative; text-align: center; width: 33.3333%;scale: 0.9;}
+  .footer1 .main_footer .container .bottom-brand-list ul li:nth-child(4){margin-top: 30px;}
+  .footer1 .main_footer .container .bottom-brand-list ul li:nth-child(5){margin-top: 30px;}
+  .footer1 .main_footer .container .bottom-brand-list ul li:nth-child(6){margin-top: 30px;}
 }
 
 @media screen and (max-width: 850px) {
@@ -186,16 +232,47 @@ div>.swiper-button-next:after{background: url(../outbackimage/btn_main_visual_ne
     .mobile_header ul li .mobile-nav li{height: 50px;border-bottom: 1px solid #ddd;background: rgba(0, 0, 0, 0.8);line-height: 50px;text-align: center;}
     .mobile_header ul li .mobile-nav li a{color: #ebebeb;}
     .mobile_header ul li .mobile-find-btn{font-size: 24px;color: #555;}
-    .container{width: 100%;}
 
-    .section4 .main_banner .container ol li{width: 50%;margin-top: 2px;position: relative;top: 40px;left: 0px; padding: 0 100px; box-sizing: border-box;}
-    .section4 .main_banner .container ol li:nth-child(4){margin-top: 0px;}
-    .section4 .main_banner .container ol li:nth-child(5){margin-top: 0px;}
-    .section4 .main_banner .container ol li:nth-child(6){margin-top: 0px;}
+    .footer1 .main_footer .container .bottom-brand-list ul{display: flex; flex-wrap: wrap;}
+    .footer1 .main_footer .container .bottom-brand-list ul li{position: relative; text-align: center; width: 33.3333%;scale: 0.9;}
+    .footer1 .main_footer .container .bottom-brand-list ul li:nth-child(4){margin-top: 30px;}
+    .footer1 .main_footer .container .bottom-brand-list ul li:nth-child(5){margin-top: 30px;}
+    .footer1 .main_footer .container .bottom-brand-list ul li:nth-child(6){margin-top: 30px;}
+}
 
-    .section5 .main_banner .container .speed-big-menu{display: flex;flex-wrap: wrap;}
-    .section5 .main_banner .container .speed-big-menu li{width: 100%;}
-    .section5 .main_banner .container .speed-big-menu li.menu03{display: block;}
+@media screen and (max-width: 800px) {
+  #header{width: 100%;height: 100px;background: #343436;padding: 0 20px;box-sizing: border-box;}
+  #header .container{background: #343436;}
+  .header_inner {display: none;}
+  .mobile_header{display: block;height: 100px;width: 100%;}
+  .mobile_header ul{display: flex; height: 100px;align-items: center;justify-content: space-between;}
+  .mobile_header>ul>li:first-child{width: 26px;height: 16px;}
+  .mobile_header>ul>li:first-child .app-btn{width: 26px;height: 16px;display: block;position: relative;}
+  .mobile_header ul li .app-btn .bar{width: 100%;height: 2px;background: #555;display: block;position: absolute;top: 0;left: 0;}
+  .mobile_header ul li .app-btn .bar1{top: 0;}
+  .mobile_header ul li .app-btn .bar1.add{top: 50%;transform: rotate(45deg);margin-top: -1px;}
+  .mobile_header ul li .app-btn .bar2{top: 50%;}
+  .mobile_header ul li .app-btn .bar2.add{opacity: 0;}
+  .mobile_header ul li .app-btn .bar3{top: 100%;}
+  .mobile_header ul li .app-btn .bar3.add{top: 50%;transform: rotate(-45deg);margin-top: -1px;}
+  .mobile_header ul li .mobile-nav{position: absolute;top: 100px;width: 100%;left: 0;display: none;height: 300px;}
+  .mobile_header ul li .mobile-nav li{height: 50px;border-bottom: 1px solid #ddd;background: rgba(0, 0, 0, 0.8);line-height: 50px;text-align: center;}
+  .mobile_header ul li .mobile-nav li a{color: #ebebeb;}
+  .mobile_header ul li .mobile-find-btn{font-size: 24px;color: #555;}
+  .container{width: 100%;}
+
+  .section4 .main_banner .container ol li{width: 33.3333%;margin-top: 2px;position: relative;top: 40px;left: 0px; box-sizing: border-box;}
+  .section4 .main_banner .container ol li:nth-child(4){margin-top: 0px;}
+  .section4 .main_banner .container ol li:nth-child(5){margin-top: 0px;}
+  .section4 .main_banner .container ol li:nth-child(6){margin-top: 0px;}
+  .section5 .main_banner .container .speed-big-menu{display: flex;flex-wrap: wrap;}
+  .section5 .main_banner .container .speed-big-menu li{width: 100%;}
+  .section5 .main_banner .container .speed-big-menu li.menu02{display: block;z-index: 9999;}
+  .section5 .main_banner .container .speed-big-menu li.menu03{display: block;z-index: 9999;}
+  .section5 .main_banner .container .speed-big-menu li.menu04{display: block;z-index: 9999;}
+
+  .footer1 .main_footer .container{position: relative;top: 310px;left: 0px;}
+  .footer1 .main_footer .container .bottom-brand-list{padding: 50px 0 50px;}
 }
 
 @media screen and (max-width: 600px) {
