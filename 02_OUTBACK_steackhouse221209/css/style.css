@@ -21,7 +21,7 @@ body{font-family: 'Noto Sans KR', sans-serif;}
 
 /* footer 공통속성 1900px로 만듬 */
 .main_footer{width: 100%;height: inherit;margin: 0 auto;background: rgb(255, 255, 255);}
-.footer_wrap{width: 1600px;height: inherit;}
+.footer_wrap{width: 100%;height: inherit;}
 /* 레이아웃 */
 #header{width: 100%;height: 100px;background: #343436;position: fixed;left: 0;top: 0;z-index: 999;}
 
@@ -103,7 +103,7 @@ div>.swiper-button-next:after{background: url(../outbackimage/btn_main_visual_ne
 .speed-big-menu > li:hover > a > span> img.icon{margin-top: -20px;}
 .speed-big-menu > li:hover > a > span.arrow{scale: 1.2;transform-origin: 0 100%;}
 .speed-big-menu > li > a > span> .icon{position: absolute;top: 44px;right: 70px;}
-.section5 .main_banner .container .speed-big-menu{display: flex;width: 100%;height: 160px;}
+.section5 .main_banner .container .speed-big-menu{display: flex;width: 100%;height: 200px;padding-bottom: 50px;}
 .section5 .main_banner .container .speed-big-menu li{width: 33.3333%;}
 .section5 .main_banner .container .speed-big-menu li.menu02{background: #907354;}
 .section5 .main_banner .container .speed-big-menu li.menu03{background: #434343;}
@@ -113,7 +113,7 @@ div>.swiper-button-next:after{background: url(../outbackimage/btn_main_visual_ne
 .section5 .main_banner .container .speed-big-menu li a .arrow{position: absolute;bottom: 37px;left: 30px;width: 40px;height: 4px;background: url(../outbackimage/speed_menu_arrow.png) right bottom -1px no-repeat;border-bottom: 1px solid #fff;transform: scale(1);transition: .3s;}
 
 
-/* main footer footer1 */
+/* footer brand footer1 */
 .footer1 .main_footer{border-top: 1px #e5e5e5 solid;}
 .footer1 .main_footer .container{position: relative;}
 .footer1 .main_footer .container .bottom-brand-list{width: 100%;padding: 30px 0 50px;background:#fff;}
@@ -123,7 +123,7 @@ div>.swiper-button-next:after{background: url(../outbackimage/btn_main_visual_ne
 .footer1 .main_footer .container .bottom-brand-list ul li:first-child:after{content: "";display: none;position: absolute; width: 1px;height: 20px;top: 50%;transform: translateY(-50%);background: #e4e4e4;}
 .footer1 .main_footer .container .bottom-brand-list ul li a img{max-width: 100%;}
 
-/* main topbutton footer2 */
+/* footer topbutton footer2 */
 .footer2 .footer_wrap{position: relative;}
 
 #topBtn {
@@ -139,6 +139,25 @@ div>.swiper-button-next:after{background: url(../outbackimage/btn_main_visual_ne
   cursor: pointer; /* Add a mouse pointer on hover *//* Add some padding */
 }
 
+/* footer information footer3 */
+.footer3{width: 100%; height: 300px; background: #232323;}
+.footer3 .footer_wrap .main_footer1 .container{position: relative;color: #646464;}
+.footer3 .footer_wrap .main_footer1 .container .footer-menu{display: flex;position: absolute;top: 40px;right: 10px;justify-content: center;}
+.footer3 .footer_wrap .main_footer1 .container .footer-menu li{position: relative;margin:0 5px;}
+.footer3 .footer_wrap .main_footer1 .container .footer-menu li::after{content: "";display: block;position: absolute; width: 1px;height: 12px;top: 50%;transform: translateY(-50%);background: #ddd;right: -7px;}
+.footer3 .footer_wrap .main_footer1 .container .footer-menu li:last-child:after{display: none;}
+.footer3 .footer_wrap .main_footer1 .container .footer-menu li a{font-size: 14px;color: #646464;}
+.footer3 .footer_wrap .main_footer1 .container .footer-left-menu{display: flex;position: absolute;top: 50px;left: 20px;width: 500px;}
+.footer3 .footer_wrap .main_footer1 .container .footer-left-menu .btns a{border: 1px solid #4f4f4f;text-align: center;padding: 5px 5px;color: #646464;}
+.footer3 .footer_wrap .main_footer1 .container .footer-left-menu .family-site select{padding: 2.5px 4px; margin-left: 5px;border: 1px solid #4f4f4f;margin-top: -4px;color: #646464;background: #232323;}
+.footer3 .footer_wrap .main_footer1 .container .information{position: absolute;top: 100px;left: 20px;}
+.footer3 .footer_wrap .main_footer1 .container .information .footer-text p span{position: relative;margin:0 5px;}
+.footer3 .footer_wrap .main_footer1 .container .information .footer-text p span:after{content: "";display: block;position: absolute; width: 1px;height: 12px;top: 50%;transform: translateY(-50%);background: #ddd;right: -7px;}
+.footer3 .footer_wrap .main_footer1 .container .information .footer-text p span:last-child:after{display: none;}
+.footer3 .footer_wrap .main_footer1 .container .information .footer-text .btn-toast-pop{text-decoration: underline;color: #646464;margin-left: 5px;}
+.footer3 .footer_wrap .main_footer1 .container .sns-menu{display: flex;position: absolute;top: 110px;right: 16px;}
+.footer3 .footer_wrap .main_footer1 .container .sns-menu li{margin-left: 14px;}
+
 /* media screen 스크롤 안생기게 하는 역할을 한다. 없으면 스크롤 생긴다. 좌우로 줄일시에 */
 /* container만큼 크기를 맞춰줘야 좌우로 줄였을 시에 container크기만큼 줄어도 스크롤이 생기지 않고 줄어든다. */
 @media screen and (max-width: 1900px) {
@@ -147,11 +166,13 @@ div>.swiper-button-next:after{background: url(../outbackimage/btn_main_visual_ne
     #mainVideo{width: 100%;}
     
 }
-@media screen and (max-width: 1600px) {
+@media screen and (max-width: 1650px) {
   .footer_wrap{width: 100%;}
 }
 
-
+@media screen and (max-width: 1280px) {
+  #topBtn{bottom: 283px;}
+}
 
 @media screen and (max-width: 1198px) {
 #header{padding: 0 20px;box-sizing: border-box;}
@@ -176,6 +197,11 @@ div>.swiper-button-next:after{background: url(../outbackimage/btn_main_visual_ne
   .section4 .main_banner .reward-title{scale: 0.7;}
   .section4 .main_banner .container ol{display: flex; flex-wrap: wrap;}
   .section4 .main_banner .container ol li{width: 25.333%;margin-top: 2px;position: relative;top: 81px;left: 280px;}
+}
+
+@media screen and (max-width: 1130px) {
+  .footer3 .footer_wrap .main_footer1 .container .footer-menu{display: none;}
+  .footer3 .footer_wrap .main_footer1 .container .sns-menu{top: 234px;right: 100px;}
 }
 
 @media screen and (max-width: 1120px) {
@@ -211,6 +237,8 @@ div>.swiper-button-next:after{background: url(../outbackimage/btn_main_visual_ne
   .footer1 .main_footer .container .bottom-brand-list ul li:nth-child(4){margin-top: 30px;}
   .footer1 .main_footer .container .bottom-brand-list ul li:nth-child(5){margin-top: 30px;}
   .footer1 .main_footer .container .bottom-brand-list ul li:nth-child(6){margin-top: 30px;}
+
+  #topBtn{bottom: 0px;right: 0;}
 }
 
 @media screen and (max-width: 850px) {
@@ -267,13 +295,24 @@ div>.swiper-button-next:after{background: url(../outbackimage/btn_main_visual_ne
   .section4 .main_banner .container ol li:nth-child(6){margin-top: 0px;}
   .section5 .main_banner .container .speed-big-menu{display: flex;flex-wrap: wrap;}
   .section5 .main_banner .container .speed-big-menu li{width: 100%;}
-  .section5 .main_banner .container .speed-big-menu li.menu02{display: block;z-index: 9999;}
-  .section5 .main_banner .container .speed-big-menu li.menu03{display: block;z-index: 9999;}
-  .section5 .main_banner .container .speed-big-menu li.menu04{display: block;z-index: 9999;}
+  .section5 .main_banner .container .speed-big-menu li.menu02{display: block;}
+  .section5 .main_banner .container .speed-big-menu li.menu03{display: block;}
+  .section5 .main_banner .container .speed-big-menu li.menu04{display: block;}
 
-  .footer1 .main_footer .container{position: relative;top: 310px;left: 0px;}
+  .footer1 .main_footer .container{position: relative;top: 280px;left: 0px;}
   .footer1 .main_footer .container .bottom-brand-list{padding: 50px 0 50px;}
+
+  #topBtn{bottom: -170px;right: -5px;scale: 0.75;}
+
+  .footer3{position: relative;top: 280px;left: 0px;}
+  .footer3 .footer_wrap .main_footer1 .container .information{scale: 0.8;}
+  .footer3 .footer_wrap .main_footer1 .container .footer-left-menu{scale: 0.8;left: 36px;top: 40px;}
 }
+
+@media screen and (max-width: 650px) {
+  .footer3 .footer_wrap .main_footer1 .container .information .footer-text p span:after{display: none;}
+  .footer3 .footer_wrap .main_footer1 .container .information .footer-text p a.btn-toast-pop{display: block;}
+  }
 
 @media screen and (max-width: 600px) {
 .section4 .main_banner .container ol{position: relative;top: -5px;left: 0px;padding: 0 100px;box-sizing: border-box;}
