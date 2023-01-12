@@ -43,14 +43,14 @@ var swiper = new Swiper(".mySwiper", {
 });
 
 /* cursor_point_change 마우스모양 */
-$('body').css({cursor:'url(./outbackimage/meat1.png),auto'})
-$('a').css({cursor:'url(./outbackimage/meat2.png),auto'})
-$('a').css({cursor:'url(./outbackimage/meat2.png),auto'})
-$('.swiper-button-next').css({cursor:'url(./outbackimage/meat2.png),auto'})
-$('.swiper-button-prev').css({cursor:'url(./outbackimage/meat2.png),auto'})
-$('.swiper-pagination-bullet').css({cursor:'url(./outbackimage/meat2.png),auto'})
-$('.footer3 .footer_wrap .main_footer1 .container .footer-left-menu .family-site select').css({cursor:'url(./outbackimage/meat2.png),auto'})
-$('.footer3 .footer_wrap .sns-menu img').css({cursor:'url(./outbackimage/meat2.png),auto'})
+// $('body').css({cursor:'url(./outbackimage/meat1.png),auto'})
+// $('a').css({cursor:'url(./outbackimage/meat2.png),auto'})
+// $('a').css({cursor:'url(./outbackimage/meat2.png),auto'})
+// $('.swiper-button-next').css({cursor:'url(./outbackimage/meat2.png),auto'})
+// $('.swiper-button-prev').css({cursor:'url(./outbackimage/meat2.png),auto'})
+// $('.swiper-pagination-bullet').css({cursor:'url(./outbackimage/meat2.png),auto'})
+// $('.footer3 .footer_wrap .main_footer1 .container .footer-left-menu .family-site select').css({cursor:'url(./outbackimage/meat2.png),auto'})
+// $('.footer3 .footer_wrap .sns-menu img').css({cursor:'url(./outbackimage/meat2.png),auto'})
 
 /* topbutton */
 $(document).ready(function(){

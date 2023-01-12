@@ -22,14 +22,14 @@ let email1Msg=document.getElementById('email1Msg');
 let regId=/^[A-Z][a-zA-Z0-9]{4,}$/; //아이디
 let regPw1=/^.*(?=^.{8,16})(?=.*\d)(?=.*[a-zA-Z])(?=.*[!@#$%^&*]).*$/; //비밀번호
 let regPoint1=/^\d{6}$/; //포인트 숫자6자리만 가능
-let regEmail1=/(^[0-9a-zA-Z]{3,})([-_.]?[0-9a-zA-Z])$/g
+let regEmail1=/(^[0-9a-zA-Z]{3,})([-_.!@#$%^&*]?[0-9a-zA-Z])$/g//영어숫자 3글자 이상의 조합 및 특수문자 포함가능합니다
 let regPhone1=/(^01[016789]{1})([0-9]{3,4})[0-9]{4}$/g;
 
 id1.addEventListener("blur",function(){
     //value값이 regId값(정규값이 아니면)
     if(!regId.test(id1.value)){
         id1Msg.style.color="red";
-        id1Msg.innerHTML="아이디는 5글자 이상 첫글자가 대문자이고 영문자, 숫자만 가능"
+        id1Msg.innerHTML="아이디는 5글자 이상 첫글자가 대문자이고 영문자, 숫자만 가능합니다!"
     }else{
         id1Msg.style.color="green";
         id1Msg.innerHTML="사용가능한 ID입니다."
@@ -39,7 +39,7 @@ id1.addEventListener("blur",function(){
 pw1.addEventListener("blur",function(){
     if(!regPw1.test(pw1.value)){
         pw1Msg.style.color="red";
-        pw1Msg.innerHTML="비번 제대로 안쓸거야?? 임마!!" //특수문자,문자,숫자 포함하고 8~16이내의 값만 가능
+        pw1Msg.innerHTML="비밀번호는 특수문자,문자,숫자 포함하고 8~16이내의 값만 가능합니다!" //특수문자,문자,숫자 포함하고 8~16이내의 값만 가능
     }else{
         pw1Msg.style.color="green";
         pw1Msg.innerHTML="사용가능한 비밀번호입니다."
@@ -55,7 +55,7 @@ pw2.addEventListener("focus",function(){
 pw2.addEventListener("blur",function(){
     if(pw1.value !=pw2.value){
         pw2Msg.style.color="red"
-        pw2Msg.innerHTML="비밀번호가 일치하지않습니다."
+        pw2Msg.innerHTML="비밀번호가 일치하지않습니다!"
         return false;
     }else{
         if((pw1.value=='')&&(pw2.value=='')){
@@ -71,10 +71,10 @@ pw2.addEventListener("blur",function(){
 email1.addEventListener("blur",function(){
     if(!regEmail1.test(email1.value)){
         email1Msg.style.color="red";
-        email1Msg.innerHTML="메일 주소도 모르고 임마 인생 어떻게 살래!"
+        email1Msg.innerHTML="영어숫자 3글자 이상부터 가능합니다! (특수문자 포함가능합니다.)"
     }else{
         email1Msg.style.color="green";
-        email1Msg.innerHTML="잘썼네 ㅎㅎ"
+        email1Msg.innerHTML="사용가능한 이메일입니다."
     }
 });
 
@@ -97,10 +97,10 @@ $("select[name=select]").on("change", function(){
 point1.addEventListener("blur",function(){
     if(!regPoint1.test(point1.value)){
         point1Msg.style.color="red";
-        point1Msg.innerHTML="숫자만 6자리라고 !!!" //숫자만 6자리이내의 값만 가능
+        point1Msg.innerHTML="숫자만 6자리를 써주시길 바랍니다!" //숫자만 6자리이내의 값만 가능
     }else{
         point1Msg.style.color="green";
-        point1Msg.innerHTML="숫자도 잘쓰넹 ㅎㅎ"
+        point1Msg.innerHTML="사용가능한 포인트 번호입니다."
     }
 })
 
@@ -120,7 +120,7 @@ point2.addEventListener("blur",function(){
             point2Msg.innerHTML="" 
         }else{
             point2Msg.style.color="green";
-            point2Msg.innerHTML="비밀번호가 일치합니다."
+            point2Msg.innerHTML="포인트번호가 일치합니다."
         }
        
     }
@@ -131,10 +131,10 @@ point2.addEventListener("blur",function(){
 tel1.addEventListener("blur",function(){
     if(!regPhone1.test(tel1.value)){
         tel1Msg.style.color="red";
-        tel1Msg.innerHTML="전화번호도 모르고 임마 인생 어떻게 살래!"
+        tel1Msg.innerHTML="전화번호는 번호만 11자리를 써주시길 바랍니다!"
     }else{
         tel1Msg.style.color="green";
-        tel1Msg.innerHTML="잘썼네 ㅎㅎ"
+        tel1Msg.innerHTML="사용 가능한 전화번호입니다."
     }
 });
 
@@ -145,7 +145,7 @@ document.getElementById('submit').addEventListener("click",function(){
         return false;
     }else{
         if(!regPw1.test(pw1.value)){
-            alert("특수문자, 문자, 숫자 포함하고 8~16 이내의 값만 가능")
+            alert("특수문자, 문자, 숫자 포함하고 8~16 이내의 값만 가능합니다!")
             pw1.value=""
             return false;
         }else{
@@ -158,7 +158,7 @@ document.getElementById('submit').addEventListener("click",function(){
 
     if(document.querySelector("[name=gender]:checked")==null){
         gender1Msg.style.color="red"
-        gender1Msg.innerHTML="성별을 잘 체크하도록 하자"; 
+        gender1Msg.innerHTML="성별을 체크해주길 바랍니다!"; 
         document.getElementById("m").focus();
         return false;
     }else{

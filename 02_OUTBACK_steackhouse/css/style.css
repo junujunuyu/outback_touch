@@ -183,8 +183,9 @@ div>.swiper-button-next:after{background: url(../outbackimage/btn_main_visual_ne
 }
 
 @media screen and (max-width: 1180px) {
-    #header{padding: 0 20px;box-sizing: border-box;}
     .container{width: 100%;}
+    #header{padding: 0 20px;box-sizing: border-box;}
+    #gnb .gnbchild{z-index: 9999;}
     .swiper_wrap{width: 100%;}
     .header_inner #gnb ul{top: -32px;}
     .header_inner #nav .navchild li:last-child{margin-right:0;}
