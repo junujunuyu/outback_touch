@@ -160,7 +160,7 @@ div>.swiper-button-next:after{background: url(../outbackimage/btn_main_visual_ne
 
 /* media screen 스크롤 안생기게 하는 역할을 한다. 없으면 스크롤 생긴다. 좌우로 줄일시에 */
 /* container만큼 크기를 맞춰줘야 좌우로 줄였을 시에 container크기만큼 줄어도 스크롤이 생기지 않고 줄어든다. */
-@media screen and (max-width: 1900px) {
+@media screen and (max-width: 2500px) {
     .swiper_wrap{width: 100%;}
     .video{width: 100%;}
     #mainVideo{width: 100%;}
